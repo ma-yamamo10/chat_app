@@ -1,3 +1,14 @@
 <div class="message">
-  <p><%= message.content %></p>
+<!–左からの吹き出し–>
+<div class="kaiwa">
+ <figure class="kaiwa-img-left">
+ <figcaption class="kaiwa-img-description">
+<%= message.user.username %>
+</figcaption>
+ </figure>
+ <div class="kaiwa-text-right">
+   <p class="kaiwa-text">
+<%= message.content %>   </p>
+ </div>
+</div>
 </div>

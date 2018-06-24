@@ -1,7 +1,7 @@
-<h1>こんにちは、<%= @username %>さん</h1>
+<h1>こんにちは<%= @username %>さん</h1>
 <p>ユーザー用ページです。</p>
-<p>Find me in app/views/pages/show.html.erb</p>
 <div>
+  <h2>トークルーム一覧</h2>
   <ul>
     <% @rooms.each do |room| %>
       <li><%=link_to "ROOM#{room.id}", "/rooms/#{room.id}" %></li>

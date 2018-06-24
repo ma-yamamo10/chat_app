@@ -15,3 +15,13 @@
  */
  // Custom bootstrap variables must be set or imported *before* bootstrap.
  @import "bootstrap";
+
+ .wrap {
+   background-image: url("line.jpg");
+ }
+ .room{
+   padding: .5em .75em;
+   border: 1px solid #ccc;
+   background-color: #2a375f;
+   color: #ccc;
+ }

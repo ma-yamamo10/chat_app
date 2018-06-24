@@ -1,3 +1,10 @@
-<div class="message">
-  <p><%= message.user.username %>:<%= message.content %></p>
-</div>
+<body class="message">
+ <div class="kaiwa">
+  <figure class="kaiwa-img-left">
+  <%= message.user.username %>
+  </figure>
+  <div class="kaiwa-text-right">
+   <p class="kaiwa-text"><%= message.content %></p>
+  </div>
+ </div>
+</body>

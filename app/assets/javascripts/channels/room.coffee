@@ -1,7 +1,7 @@
 //= require jquery
 //= require jquery_ujs
-
-App.room = App.cable.subscriptions.create "RoomChannel",
+document.addEventListener 'turbolinks:load', ->
+  App.room = App.cable.subscriptions.create { channel: "RoomChannel", room_id: $('#messages').data('room_id') },
   connected: ->
     # Called when the subscription is ready for use on the server
 
@@ -9,7 +9,7 @@ App.room = App.cable.subscriptions.create "RoomChannel",
     # Called when the subscription has been terminated by the server
 
   received: (data) ->
-    $('#message').append data['message']
+    $('#messages').append data['message']
     # Called when there's incoming data on the websocket for this channel
 
   speak: (message) ->

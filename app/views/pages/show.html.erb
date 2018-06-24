@@ -1,3 +1,11 @@
 <h1>こんにちは、<%= @username %>さん</h1>
 <p>ユーザー用ページです。</p>
 <p>Find me in app/views/pages/show.html.erb</p>
+<div>
+  <ul>
+    <% @rooms.each do |room| %>
+      <li><%=link_to "ROOM#{room.id}", "/rooms/#{room.id}" %></li>
+    <% end %>
+  </ul>
+  <li><%=link_to "NEW ROOM", "/rooms/new" %></li>
+</div>

@@ -1,8 +1,8 @@
 <h1>Chat room</h1>
-<div id='message'>
+<div id="messages", data-room_id="<%= @room.id %>">
+Room No.<%= @room.id %>
   <%= render @messages %>
 </div>
-
 <form>
   <label>Say something</label><br/>
   <input type="text" data-behavior="room_speaker">
